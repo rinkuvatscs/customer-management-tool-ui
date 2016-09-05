@@ -1,0 +1,40 @@
+buildscript {
+	ext {
+		springBootVersion = '1.4.0.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'spring-boot'
+
+
+group = 'com.management.customer.tool'
+version = '1.0.0'
+jar {
+    baseName = 'CMT'
+    version =  '1.0.0'
+}
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+}
+
+
+dependencies {
+	compile('org.springframework.boot:spring-boot-starter-web')
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+	// https://mvnrepository.com/artifact/org.apache.tomcat.embed/tomcat-embed-jasper
+compile group: 'org.apache.tomcat.embed', name: 'tomcat-embed-jasper', version: '9.0.0.M9'
+// https://mvnrepository.com/artifact/jstl/jstl
+compile group: 'jstl', name: 'jstl', version: '1.2'
+	
+}
