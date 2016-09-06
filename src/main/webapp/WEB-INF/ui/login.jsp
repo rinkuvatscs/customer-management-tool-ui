@@ -1,4 +1,4 @@
-
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
 <!DOCTYPE html>
 <html>
@@ -11,19 +11,32 @@
 
     </head>
 <body>
-<form>
-  <div align="center"><header >Customer Management Tool</header></div>
-  <label>Username <span>*</span></label>
-  <input/>
-  <div class="help">At least 6 character</div>
-  <label>Password <span>*</span></label>
-  <input/>
-  <div class="help">Use upper and lowercase lettes as well</div>
+<form:form action="login" modelAttribute="command" method="post">
+<table style="width:100%">
+<tr>
+  <td colspan="2"><div align="center"><header >Customer Management Tool</header></div></td>
+  </tr>
+  <tr>
+  <td><label>Username <span>*</span></label></td>
+ <td><form:input path="username"/></td>
+ </tr>
+ <tr>
+  <td colspan="2"><div class="help">At least 6 character</div></td>
+  </tr>
+  <tr>
+ <td> <label>Password <span>*</span></label></td>
+ <td> <form:input path="password"/></td>
+  </tr>
+  <tr><td colspan="2"><div class="help">Use upper and lowercase lettes as well</div></td></tr>
   
-    <label>Roll <span>*</span></label>
-    
-  <button>Login</button>
-</form>
+   <tr> <td><label>Roll <span>*</span></label></td>
+  <td>  <form:select path="role" items="${roleList}"></form:select></td>
+    </tr>
+ 
+<tr>
+    <td colspan="2"> <input type="submit" value="Login1" class="formsubmit" /></td></tr>
+     </table>
+</form:form>
     
 
 
