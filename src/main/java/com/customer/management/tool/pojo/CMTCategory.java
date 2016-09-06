@@ -1,5 +1,8 @@
 package com.customer.management.tool.pojo;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class CMTCategory {
 
 	private int category_id;

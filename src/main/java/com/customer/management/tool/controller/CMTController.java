@@ -14,39 +14,31 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.customer.management.tool.pojo.CMTLogin;
+import com.customer.management.util.CMTUtil;
 
 @Controller
 public class CMTController {
 
-	
+	@Autowired
+	CMTUtil cmtUtil;
 	
 	@RequestMapping(value="/login",method = RequestMethod.GET)
 	public String login(ModelMap model)
 	{
 	
 		model.addAttribute("command", new CMTLogin("", "", "ADMIN"));
-		Map<String,String> country = new LinkedHashMap<String,String>();
-		country.put("1", "ADMIN");
-		country.put("2", "USER");
-		country.put("3", "CUSTOMER");
+		Map<String,String> roles = cmtUtil.getAllRoles();
 		
-		model.addAttribute("roleList", country);
+		
+		model.addAttribute("roleList", roles);
 		return "login";
 	}
 	
 	@RequestMapping(value="/login",method = RequestMethod.POST)
 	public String login(@ModelAttribute("command") CMTLogin cmtLogin ,Model model)
 	{
-	
-		System.out.println("user is:"+cmtLogin.getUsername());
-		System.out.println("role is:"+cmtLogin.getRole());
-		Map<String,String> country = new LinkedHashMap<String,String>();
-		country.put("1", "ADMIN");
-		country.put("2", "USER");
-		country.put("3", "CUSTOMER");	
-	
-		
-		model.addAttribute("roleList", country);
+	  Map<String,String> roles = cmtUtil.getAllRoles();		
+		model.addAttribute("roleList", roles);
 		return "login";
 	}
 	
