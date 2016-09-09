@@ -14,7 +14,7 @@
 <form:form action="login" modelAttribute="command" method="post">
 <table style="width:100%">
 <tr>
-  <td colspan="2"><div align="center"><header >Customer Management Tool</header></div></td>
+  <td colspan="2"><div align="center"><header>Customer Management Tool</header></div></td>
   </tr>
   <tr>
   <td><label>Username <span>*</span></label></td>

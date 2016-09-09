@@ -34,7 +34,7 @@ public class CMTController {
 		return "login";
 	}
 	
-	@RequestMapping(value="/login",method = RequestMethod.POST)
+	/*@RequestMapping(value="/login",method = RequestMethod.POST)
 	public String login(@ModelAttribute("command") CMTLogin cmtLogin ,Model model)
 	{
 	  Map<String,String> roles = cmtUtil.getAllRoles();		
@@ -49,5 +49,19 @@ public class CMTController {
 	{
 		 return new ModelAndView("redirect:login");
 		
-	}
+	}*/
+	
+	
+	  @RequestMapping(value = "/home", method=RequestMethod.GET)
+      public String home() {
+          return "home";
+      }
+	  
+	  
+	  @RequestMapping(value="/",method=RequestMethod.GET)
+		public String welcome(Map<String, Object> model) {
+			model.put("message", "Hello Spring Boot with Tiles");
+			return "welcome";
+		}
+
 }

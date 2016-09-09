@@ -2,6 +2,9 @@ package com.customer.management.tool;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.context.embedded.EmbeddedServletContainerFactory;
+import org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
@@ -9,31 +12,24 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
+import org.springframework.web.servlet.view.UrlBasedViewResolver;
+import org.springframework.web.servlet.view.tiles3.TilesConfigurer;
+import org.springframework.web.servlet.view.tiles3.TilesView;
+import org.springframework.web.servlet.view.tiles3.TilesViewResolver;
 
 @SpringBootApplication
-@EnableWebMvc
 @ComponentScan("com.customer.management")
-public class CustomerManagementToolApplication extends WebMvcConfigurerAdapter {
+public class CustomerManagementToolApplication{//extends WebMvcConfigurerAdapter {
 
 	public static void main(String[] args) {
 		SpringApplication.run(CustomerManagementToolApplication.class, args);
 	}
-	@Override
-	public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
-		configurer.enable();
-	}
 	
 	 @Bean
-	    public InternalResourceViewResolver viewResolver() {
-	        InternalResourceViewResolver resolver = new InternalResourceViewResolver();
-	        resolver.setPrefix("WEB-INF/ui/");
-	        resolver.setSuffix(".jsp");
-	        return resolver;
-	    }
-	 
-	/* @Override
-     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-             registry.addResourceHandler("/resources/**")
-                     .addResourceLocations("/resources/");
-     }*/
+	    public EmbeddedServletContainerFactory servletContainer() {
+	        TomcatEmbeddedServletContainerFactory factory = 
+	                      new TomcatEmbeddedServletContainerFactory();
+	        return factory;
+	     }
+	
 }
