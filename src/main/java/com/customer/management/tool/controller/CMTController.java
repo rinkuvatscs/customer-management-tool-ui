@@ -44,9 +44,22 @@ public class CMTController {
 	}
 	
 	@RequestMapping(value="/menu",method = RequestMethod.POST)
-	public String menu(){		
+	public String menu(){
+		boolean isAuthenicate = false ;
+		String responsePage = null ;
+		/* Need to get Usename , password and role Here from login.jsp
+		Using  Username , password and role just call CMT Rest call for login 
+		if login is ok from CMT Rest Call then open menu.jsp otherwise call login.jsp
+		 with message
+		*/
+		//isAuthenicate = CMTRestCall.login(username,password, role);
+		if(isAuthenicate) {
+		responsePage = "menu" ;
+		}else {
+			responsePage = "login" ;
+		}
 		
-		return "menu";
+		return responsePage ;
 	}
 
 	@RequestMapping("/")

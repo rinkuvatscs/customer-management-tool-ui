@@ -29,7 +29,7 @@
   </tr>
   <tr><td colspan="2"><div class="help">Use upper and lowercase lettes as well</div></td></tr>
   
-   <tr> <td><label>Roll <span>*</span></label></td>
+   <tr> <td><label>Role <span>*</span></label></td>
   <td>  <form:select path="role" items="${roleList}"></form:select></td>
     </tr>
  
