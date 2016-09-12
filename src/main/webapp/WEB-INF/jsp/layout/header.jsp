@@ -1,4 +1,3 @@
 <%@ page contentType="text/html; charset=utf-8"%>
 
-<h2>Header</h2>
-<hr>
+<h2 align="center">Customer Management Tool</h2>

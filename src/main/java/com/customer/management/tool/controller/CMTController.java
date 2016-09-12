@@ -34,34 +34,39 @@ public class CMTController {
 		return "login";
 	}
 	
-	/*@RequestMapping(value="/login",method = RequestMethod.POST)
+	@RequestMapping(value="/login",method = RequestMethod.POST)
 	public String login(@ModelAttribute("command") CMTLogin cmtLogin ,Model model)
 	{
 	  Map<String,String> roles = cmtUtil.getAllRoles();		
 		model.addAttribute("roleList", roles);
+		
 		return "login";
 	}
 	
-	
+	@RequestMapping(value="/menu",method = RequestMethod.POST)
+	public String menu(){		
+		
+		return "menu";
+	}
 
 	@RequestMapping("/")
 	public ModelAndView  show()
 	{
 		 return new ModelAndView("redirect:login");
 		
-	}*/
+	}
 	
 	
-	  @RequestMapping(value = "/home", method=RequestMethod.GET)
+	  @RequestMapping(value = "/adduser", method=RequestMethod.POST)
       public String home() {
-          return "home";
+          return "adduser";
       }
 	  
 	  
-	  @RequestMapping(value="/",method=RequestMethod.GET)
+	/*  @RequestMapping(value="/",method=RequestMethod.GET)
 		public String welcome(Map<String, Object> model) {
 			model.put("message", "Hello Spring Boot with Tiles");
 			return "welcome";
 		}
-
+*/
 }

@@ -4,9 +4,12 @@
 <html>
 <head>
 <title>Spring Boot with Tiles</title>
+
 </head>
 <body>
 	<tiles:insertAttribute name="header" />
+	<tiles:insertAttribute name="menu" />
 	<tiles:insertAttribute name="body" />
+	
 </body>
 </html>
