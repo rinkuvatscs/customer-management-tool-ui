@@ -44,8 +44,8 @@ public class CMTController {
 	}
 	
 	@RequestMapping(value="/menu",method = RequestMethod.POST)
-	public String menu(){
-		boolean isAuthenicate = false ;
+	public String menu(@ModelAttribute("command") CMTLogin cmtLogin ,Model model){
+		boolean isAuthenicate = true ;
 		String responsePage = null ;
 		/* Need to get Usename , password and role Here from login.jsp
 		Using  Username , password and role just call CMT Rest call for login 
@@ -56,6 +56,8 @@ public class CMTController {
 		if(isAuthenicate) {
 		responsePage = "menu" ;
 		}else {
+			  Map<String,String> roles = cmtUtil.getAllRoles();
+			model.addAttribute("roleList", roles);
 			responsePage = "login" ;
 		}
 		
