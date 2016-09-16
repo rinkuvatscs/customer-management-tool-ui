@@ -4,10 +4,6 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
  <style type="text/css">
  .form-group
  {
@@ -33,6 +29,17 @@
   cursor: pointer;
   transition: all 0.15s ease-in-out;
 }
+
+
+.ff
+{
+color: white;
+  background: #9932CC;
+ padding: 5px 15px;
+  font-size: 1em;
+
+  
+}
  
  </style>
 <title>Insert title here</title>
@@ -44,11 +51,11 @@
   
   <div class="col-xs-5">
    
-    <input type="submit" value="ADD" class="formsubmit" />
-    <input type="submit" value="GET" class="formsubmit" />
-    <input type="submit" value="EDIT" class="formsubmit" />
-    <input type="submit" value="BACK" class="formsubmit" />
-    <input type="submit" value="CLEAR" class="formsubmit" />
+    <input type="submit" value="ADD" class="ff" />
+    <input type="submit" value="GET" class="ff" />
+    <input type="submit" value="EDIT" class="ff" />
+    <input type="submit" value="BACK" class="ff" />
+    <input type="submit" value="CLEAR" class="ff" />
   </div>
 </div>
 <div class="form-group row">

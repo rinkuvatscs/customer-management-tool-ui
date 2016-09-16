@@ -13,11 +13,11 @@
 
 	<!-- <definition name="*" extends="baseLayout">
 		<put-attribute name="body" value="/WEB-INF/jsp/view/{1}.jsp" />
-	</definition>
+	</definition>-->
  <definition name="login" extends="baseLayout">
 		<put-attribute name="body" value="/WEB-INF/ui/login.jsp" />
 		<put-attribute name="header" value="/WEB-INF/jsp/view/blank.jsp" />
-	</definition>  -->
+	</definition>  
 	<definition name="menu" extends="baseLayout">
 		<put-attribute name="body" value="/WEB-INF/jsp/view/menu.jsp" />
 		<put-attribute name="header" value="/WEB-INF/jsp/layout/header.jsp" />
