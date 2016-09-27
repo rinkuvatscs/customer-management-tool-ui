@@ -3,6 +3,10 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
  <style type="text/css">
  .form-group
@@ -40,66 +44,122 @@ color: white;
 
   
 }
- 
- </style>
+fieldset.scheduler-border {
+    border: solid 1px #DDD !important;
+    padding: 0 10px 10px 10px;
+    border-bottom: none;
+    margin-left: 10px;
+}
+
+legend.scheduler-border {
+    width: auto !important;
+    border: none;
+    font-size: 14px;
+} </style>
 <title>Insert title here</title>
 </head>
 <body>
-<div class="row">
+<div class="row" style="margin-left: 10px;margin-right: 10px;">
+ <fieldset class="scheduler-border">
+<legend class="scheduler-border">User Details</legend>
+
 <div class="col-xs-3">
 <div class="form-group row">
   
-  <div class="col-xs-5">
-   
-    <input type="submit" value="ADD" class="ff" />
-    <input type="submit" value="GET" class="ff" />
-    <input type="submit" value="EDIT" class="ff" />
-    <input type="submit" value="BACK" class="ff" />
-    <input type="submit" value="CLEAR" class="ff" />
-  </div>
-</div>
-<div class="form-group row">
-  <label for="example-search-input" class="col-xs-1 col-form-label">Search</label>
-  <div class="col-xs-3">
-    <input class="form-control" type="text" value="How do I shoot web" id="example-search-input">
+  <div class="col-xs-12">
+  <fieldset class="scheduler-border" >
+<legend class="scheduler-border">General Information</legend>
+
+<table>
+<tr><td align="center"><input type="submit" value="ADD" class="ff" /></td></tr>
+<tr><td><input type="submit" value="ADD" class="ff" /></td></tr>
+</table>   
+</fieldset>
   </div>
   
 </div>
 </div>
 
 <div class="col-xs-3">
+<fieldset class="scheduler-border">
+<legend class="scheduler-border"></legend>
 <div class="form-group row">
-  <label  class="col-xs-1 col-form-label">Text</label>
-  <div class="col-xs-3">
-    <input class="form-control" type="text" value="Artisanal kale" id="example-text-input">
+  <label  class="col-xs-3 col-form-label">Name</label>
+  <div class="col-xs-9">
+    <input class="form-control" type="text" value="Artisanal kale" />
   </div>
-  <table border="1">
-  <tr><td>hhhh</td></tr>
-  </table>
+  
 </div>
 <div class="form-group row">
-  <label for="example-search-input" class="col-xs-1 col-form-label">Search</label>
-  <div class="col-xs-3">
-    <input class="form-control" type="text" value="How do I shoot web" id="example-search-input">
+  <label  class="col-xs-3 col-form-label">UserName</label>
+  <div class="col-xs-9">
+    <input class="form-control" type="text" value="How do I shoot web"/>
+    
   </div>
 </div>
+
+<div class="form-group row">
+  <label  class="col-xs-3 col-form-label">UserEmail</label>
+  <div class="col-xs-9">
+    <input class="form-control" type="text" value="How do I shoot web"/>
+  </div>
+</div>
+
+<div class="form-group row">
+  <label  class="col-xs-3 col-form-label">User Mobile</label>
+  <div class="col-xs-9">
+    <input class="form-control" type="text" value="How do I shoot web"/>
+  </div>
+</div>
+
+<div class="form-group row">
+  <label  class="col-xs-3 col-form-label">Password</label>
+  <div class="col-xs-9">
+    <input class="form-control" type="text" value="How do I shoot web"/>
+  </div>
+</div>
+
+
+<div class="form-group row">
+  <label  class="col-xs-3 col-form-label">Confirm Password</label>
+  <div class="col-xs-9">
+    <input class="form-control" type="text" value="How do I shoot web" />
+  </div>
+</div>
+
+
+<div class="form-group row">
+  <label  class="col-xs-3 col-form-label">Role</label>
+  <div class="col-xs-9">
+    <input class="form-control" type="text" value="How do I shoot web"/>
+  </div>
+</div>
+
+<div class="form-group row">
+  <label  class="col-xs-3 col-form-label">Status</label>
+  <div class="col-xs-9">
+    <input class="form-control" type="text" value="How do I shoot web" />
+  </div>
+</div>
+
+</fieldset>
 </div>
 
 <div align="center" class="col-xs-6" style="background-color: yellow;">
 <div class="form-group row" style="background-color: red" align="center">
   <span  class="col-xs-6 col-form-label"  style="background-color: green;" >Text</span>
   <div class="col-xs-6" align="center">
-    <input class="form-control" type="text" value="Artisanal kale" id="example-text-input">
+    <input class="form-control" type="text" value="Artisanal kale" />
   </div>
 </div>
 <div class="form-group row">
   <label for="example-search-input" class="col-xs-1 col-form-label">Search</label>
   <div class="col-xs-3">
-    <input class="form-control" type="text" value="How do I shoot web" id="example-search-input">
+    <input class="form-control" type="text" value="How do I shoot web"/>
   </div>
 </div>
 </div>
-
+</fieldset>
 </div>
 </body>
 </html>
