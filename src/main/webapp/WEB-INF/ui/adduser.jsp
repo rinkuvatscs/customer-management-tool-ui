@@ -55,12 +55,132 @@ legend.scheduler-border {
     width: auto !important;
     border: none;
     font-size: 14px;
-} </style>
+} 
+
+.boxborder
+{
+ border: solid 1px #DDD !important;
+   
+    border-bottom: none;
+    
+
+}
+
+</style>
 <title>Insert title here</title>
 </head>
 <body>
+<div class="container-fluid">
+<fieldset class="scheduler-border">
+<legend class="scheduler-border">User Details</legend>
+   <div class="row">
+    <div class="col-sm-2" style="background-color:white;">
+    <fieldset class="boxborder">
+    <legend class="scheduler-border"></legend>
+  <div class="form-group row" align="center"> 
+  <button name="ddd" value="sumb">ADD</button>  
+</div>
+<div class="form-group row" align="center"> 
+  <button name="ddd" value="sumb">GET</button>  
+</div>
+<div class="form-group row" align="center"> 
+  <button name="ddd" value="sumb">EDIT</button>  
+</div>
+<div class="form-group row" align="center"> 
+  <button name="ddd" value="sumb">BACK</button>  
+</div>
+<div class="form-group row" align="center"> 
+  <button name="ddd" value="sumb">CLEAR</button>  
+</div>
+</fieldset>
+  </div>
+    <div class="col-sm-4" style="background-color:white;">
+    <fieldset class="boxborder">
+    <legend class="scheduler-border"></legend>
+    <div class="form-group row">     
+  <label  class="col-xs-4 col-form-label">Name</label>
+  <div class="col-xs-8">
+    <input class="form-control" type="text" value="Name Field" />
+  </div>  
+</div>
+<div class="form-group row">     
+  <label  class="col-xs-4 col-form-label">Name</label>
+  <div class="col-xs-8">
+    <input class="form-control" type="text" value="Name Field" />
+  </div>  
+</div>
+<div class="form-group row">     
+  <label  class="col-xs-4 col-form-label">Name</label>
+  <div class="col-xs-8">
+    <input class="form-control" type="text" value="Name Field" />
+  </div>  
+</div>
+<div class="form-group row">     
+  <label  class="col-xs-4 col-form-label">Name</label>
+  <div class="col-xs-8">
+    <input class="form-control" type="text" value="Name Field" />
+  </div>  
+</div>
+<div class="form-group row">     
+  <label  class="col-xs-4 col-form-label">Name</label>
+  <div class="col-xs-8">
+    <input class="form-control" type="text" value="Name Field" />
+  </div>  
+</div>
+<div class="form-group row">     
+  <label  class="col-xs-4 col-form-label">Name</label>
+  <div class="col-xs-8">
+    <input class="form-control" type="text" value="Name Field" />
+  </div>  
+</div>
+<div class="form-group row">     
+  <label  class="col-xs-4 col-form-label">Name</label>
+  <div class="col-xs-8">
+    <input class="form-control" type="text" value="Name Field" />
+  </div>  
+</div>
+</fieldset>
+    </div>
+    <div class="col-sm-6" style="background-color:white;">
+     <fieldset class="boxborder">
+     <legend></legend>
+    <div class="form-group row col-xs-12">
+  <table class="table table-bordered">
+    
+      <tr>
+        <td>Firstname</td>
+        <td>Lastname</td>
+        <td>Email</td>
+      </tr>
+    
+   
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+      </tr>
+      <tr>
+        <td>July</td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
+      </tr>
+   
+  </table>
   
-<div class="container">
+</div>
+</fieldset>
+</div>
+  </div>
+  </fieldset>
+</div>
+  
+  
+<!-- <div class="container">
 <div class="row" style="margin-left: 5px;margin-right: 5px;">
  <fieldset class="scheduler-border">
 <legend class="scheduler-border">User Details</legend>
@@ -176,7 +296,7 @@ legend.scheduler-border {
       </tr>
     </tbody>
   </table>
-<!-- <div class="form-group row" style="background-color: red" align="center">
+<div class="form-group row" style="background-color: red" align="center">
   <span  class="col-xs-6 col-form-label"  style="background-color: green;" >Text</span>
   <div class="col-xs-6" align="center">
     <input class="form-control" type="text" value="Artisanal kale" />
@@ -187,11 +307,11 @@ legend.scheduler-border {
   <div class="col-xs-3">
     <input class="form-control" type="text" value="How do I shoot web"/>
   </div>
+</div>
+</fieldset>
+</div>
+</fieldset>
+</div>
 </div> -->
-</fieldset>
-</div>
-</fieldset>
-</div>
-</div>
 </body>
 </html>
