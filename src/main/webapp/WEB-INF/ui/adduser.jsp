@@ -1,3 +1,4 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -66,17 +67,30 @@ legend.scheduler-border {
 
 }
 
+.panel-body {
+    padding: 0;
+    margin: 0;
+    
+}
+
+.panel-default {
+    padding: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
 </style>
 <title>Insert title here</title>
 </head>
-<body>
-<div class="container-fluid">
+<body style="background-color: #f7f7f7">
+<div class="container-fluid" style="background-color: #f7f7f7">
 <fieldset class="scheduler-border">
 <legend class="scheduler-border">User Details</legend>
    <div class="row">
-    <div class="col-sm-2" style="background-color:white;">
-    <fieldset class="boxborder">
-    <legend class="scheduler-border"></legend>
+    <div class="col-sm-2 panel panel-default" style="background-color: #f7f7f7">
+    <div class="panel-body" style="margin-top: 5px;">
   <div class="form-group row" align="center"> 
   <button name="ddd" value="sumb">ADD</button>  
 </div>
@@ -87,16 +101,18 @@ legend.scheduler-border {
   <button name="ddd" value="sumb">EDIT</button>  
 </div>
 <div class="form-group row" align="center"> 
-  <button name="ddd" value="sumb">BACK</button>  
+  <form:form action="back" modelAttribute="command">   
+    <input type="submit" value="BACK" style="color:#000"/>
+    </form:form>
 </div>
 <div class="form-group row" align="center"> 
   <button name="ddd" value="sumb">CLEAR</button>  
 </div>
-</fieldset>
+</div>
   </div>
-    <div class="col-sm-4" style="background-color:white;">
-    <fieldset class="boxborder">
-    <legend class="scheduler-border"></legend>
+    <div class="col-sm-4 panel panel-default" style="background-color: #f7f7f7">
+   
+      <div class="panel-body" style="margin-top: 5px;padding-right: 5px;">
     <div class="form-group row">     
   <label  class="col-xs-4 col-form-label">Name</label>
   <div class="col-xs-8">
@@ -104,48 +120,66 @@ legend.scheduler-border {
   </div>  
 </div>
 <div class="form-group row">     
-  <label  class="col-xs-4 col-form-label">Name</label>
+  <label  class="col-xs-4 col-form-label">UserName</label>
   <div class="col-xs-8">
-    <input class="form-control" type="text" value="Name Field" />
+    <input class="form-control" type="text" value="Username Field" />
   </div>  
 </div>
 <div class="form-group row">     
-  <label  class="col-xs-4 col-form-label">Name</label>
+  <label  class="col-xs-4 col-form-label">UserEmail</label>
   <div class="col-xs-8">
-    <input class="form-control" type="text" value="Name Field" />
+    <input class="form-control" type="text" value="Email Field" />
   </div>  
 </div>
 <div class="form-group row">     
-  <label  class="col-xs-4 col-form-label">Name</label>
+  <label  class="col-xs-4 col-form-label">UserMbile</label>
   <div class="col-xs-8">
-    <input class="form-control" type="text" value="Name Field" />
+    <input class="form-control" type="text" value="Mobile Field" />
   </div>  
 </div>
 <div class="form-group row">     
-  <label  class="col-xs-4 col-form-label">Name</label>
+  <label  class="col-xs-4 col-form-label">Password</label>
   <div class="col-xs-8">
-    <input class="form-control" type="text" value="Name Field" />
+    <input class="form-control" type="text" value="Password Field" />
   </div>  
 </div>
 <div class="form-group row">     
-  <label  class="col-xs-4 col-form-label">Name</label>
+  <label  class="col-xs-4 col-form-label">ConfirmPassword</label>
   <div class="col-xs-8">
-    <input class="form-control" type="text" value="Name Field" />
+    <input class="form-control" type="text" value="ConfirmPassword Field" />
   </div>  
 </div>
 <div class="form-group row">     
-  <label  class="col-xs-4 col-form-label">Name</label>
+  <label  class="col-xs-4 col-form-label">Role</label>
   <div class="col-xs-8">
-    <input class="form-control" type="text" value="Name Field" />
+  <select class="selectpicker form-control">
+  <option>Select</option>
+  <option>User</option>
+  <option>Admin</option>
+</select>
+  <!--   <input class="form-control" type="text" value="Name Field" />
+ -->  </div>  
+</div>
+<div class="form-group row">     
+  <label  class="col-xs-4 col-form-label">Status</label>
+  <div class="col-xs-8">
+ <select class="selectpicker form-control">
+  <option>ACTIVATE</option>
+  <option>DEACTIVATE</option>
+  <option>DELETE</option>
+</select>
   </div>  
 </div>
-</fieldset>
+
+</div>
+
     </div>
-    <div class="col-sm-6" style="background-color:white;">
-     <fieldset class="boxborder">
-     <legend></legend>
-    <div class="form-group row col-xs-12">
-  <table class="table table-bordered">
+    <div class="col-sm-5  panel panel-default" style="background-color: #f7f7f7">
+    
+    <div class="panel-body col-xs-12">
+        <div class="table-responsive">
+    
+  <table class="table table-bordered" style="margin: 0;">
     
       <tr>
         <td>Firstname</td>
@@ -171,147 +205,15 @@ legend.scheduler-border {
       </tr>
    
   </table>
-  
+  </div>
 </div>
+
+</div>
+  </div>
 </fieldset>
 </div>
-  </div>
-  </fieldset>
-</div>
   
   
-<!-- <div class="container">
-<div class="row" style="margin-left: 5px;margin-right: 5px;">
- <fieldset class="scheduler-border">
-<legend class="scheduler-border">User Details</legend>
 
-<div class="col-xs-3">
-<div class="form-group row">
-  
-  <div class="col-xs-12">
-  <fieldset class="scheduler-border" >
-<legend class="scheduler-border">General Information</legend>
-
-<table>
-<tr><td align="center"><input type="submit" value="ADD" class="ff" /></td></tr>
-<tr><td><input type="submit" value="ADD" class="ff" /></td></tr>
-</table>   
-</fieldset>
-  </div>
-  
-</div>
-</div>
-
-<div class="col-xs-3">
-<fieldset class="scheduler-border">
-<legend class="scheduler-border"></legend>
-<div class="form-group row">
-  <label  class="col-xs-4 col-form-label">Name</label>
-  <div class="col-xs-8">
-    <input class="form-control" type="text" value="Name Field" />
-  </div>
-  
-</div>
-<div class="form-group row">
-  <label  class="col-xs-4 col-form-label">UserName</label>
-  <div class="col-xs-8">
-    <input class="form-control" type="text" value="Username Field"/>
-    
-  </div>
-</div>
-
-<div class="form-group row">
-  <label  class="col-xs-4 col-form-label">UserEmail</label>
-  <div class="col-xs-8">
-    <input class="form-control" type="text" value="UserEmail Field"/>
-  </div>
-</div>
-
-<div class="form-group row">
-  <label  class="col-xs-4 col-form-label">User Mobile</label>
-  <div class="col-xs-8">
-    <input class="form-control" type="text" value="Mobile Field"/>
-  </div>
-</div>
-
-<div class="form-group row">
-  <label  class="col-xs-4 col-form-label">Password</label>
-  <div class="col-xs-8">
-    <input class="form-control" type="text" value="Password Field"/>
-  </div>
-</div>
-
-
-<div class="form-group row">
-  <label  class="col-xs-4 col-form-label">Confirm Password</label>
-  <div class="col-xs-8">
-    <input class="form-control" type="text" value="Confirm Password Field" />
-  </div>
-</div>
-
-
-<div class="form-group row">
-  <label  class="col-xs-4 col-form-label">Role</label>
-  <div class="col-xs-8">
-    <input class="form-control" type="text" value="How do I shoot web"/>
-  </div>
-</div>
-
-<div class="form-group row">
-  <label  class="col-xs-4 col-form-label">Status</label>
-  <div class="col-xs-8">
-    <input class="form-control" type="text" value="How do I shoot web" />
-  </div>
-</div>
-
-</fieldset>
-</div>
-
-<div align="center" class="col-xs-6">
-<fieldset class="scheduler-border">
-<legend class="scheduler-border"></legend>
- <table class="table table-bordered">
-    <thead>
-      <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Email</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
-      </tr>
-      <tr>
-        <td>Mary</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-      </tr>
-    </tbody>
-  </table>
-<div class="form-group row" style="background-color: red" align="center">
-  <span  class="col-xs-6 col-form-label"  style="background-color: green;" >Text</span>
-  <div class="col-xs-6" align="center">
-    <input class="form-control" type="text" value="Artisanal kale" />
-  </div>
-</div>
-<div class="form-group row">
-  <label for="example-search-input" class="col-xs-1 col-form-label">Search</label>
-  <div class="col-xs-3">
-    <input class="form-control" type="text" value="How do I shoot web"/>
-  </div>
-</div>
-</fieldset>
-</div>
-</fieldset>
-</div>
-</div> -->
 </body>
 </html>

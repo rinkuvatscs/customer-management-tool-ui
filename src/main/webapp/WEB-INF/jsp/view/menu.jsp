@@ -13,6 +13,19 @@
     hr{
         margin: 60px 0;
     }
+    fieldset.scheduler-border {
+    border: solid 1px #DDD !important;
+    padding: 0 10px 10px 10px;
+    border-bottom: none;
+    margin-left: 10px;
+}
+
+legend.scheduler-border {
+    width: auto !important;
+    border: none;
+    font-size: 14px;
+} 
+    
 </style>
  <link href="../../../css/menustyle.css" rel="stylesheet" type="text/css" />
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -21,9 +34,9 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
  
 </head>
-<body>
-<div class="bs-example">
-    <ul class="nav nav-pills">
+<body style="background-color: #f7f7f7">
+<div class="bs-example col-sm-12">
+   <ul class="nav nav-pills">
       <!--   <li class="active" data-toggle=""  ><a href="#">Home</a></li> -->
          <li class="dropdown">
             <a href="#" data-toggle="dropdown" class="dropdown-toggle">USER <b class="caret"></b></a>
@@ -75,6 +88,13 @@
             </ul>
             </li>
             </ul>
+       <hr>   
+      </div>
+      <div class="col-sm-12" align="left">
+      <fieldset class="scheduler-border">
+      <legend class="scheduler-border"><b>WELCOME ADMIN</b></legend>
+     <h3 align="center"><b>Welcome Admin</b></h3> 
+      </fieldset>
       </div>
 </body>
 </html>                                		
