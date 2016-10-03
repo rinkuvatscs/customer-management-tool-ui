@@ -25,7 +25,7 @@
 	
 	<definition name="adduser" extends="baseLayout">
 		<put-attribute name="body" value="/WEB-INF/ui/adduser.jsp" />
-		<!-- <put-attribute name="menu" value="/WEB-INF/jsp/view/menu.jsp" /> -->
+		 <put-attribute name="menu" value="/WEB-INF/jsp/view/menu.jsp" /> 
 		<put-attribute name="header" value="/WEB-INF/jsp/layout/header.jsp" />
 	</definition>
 	

@@ -9,6 +9,16 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="code.jquery.com/jquery-1.12.3.js"></script>
+    
+    <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.1.0/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.1.0/js/responsive.bootstrap.min.js"></script>
+
+
+
+
  <style type="text/css">
  .form-group
  {
@@ -82,14 +92,27 @@ legend.scheduler-border {
 }
 
 </style>
-<title>Insert title here</title>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#example').DataTable({
+    	
+    	"filter":   false
+    
+        
+    	
+    });
+} );
+</script>
+<title>Customer Management Tool</title>
 </head>
 <body style="background-color: #f7f7f7">
 <div class="container-fluid" style="background-color: #f7f7f7">
 <fieldset class="scheduler-border">
 <legend class="scheduler-border">User Details</legend>
    <div class="row">
-    <div class="col-sm-2 panel panel-default" style="background-color: #f7f7f7">
+     <form:form action="back" modelAttribute="command" style="display:inline;">  
+    <%-- <div class="col-sm-2 panel panel-default" style="background-color: #f7f7f7">
     <div class="panel-body" style="margin-top: 5px;">
   <div class="form-group row" align="center"> 
   <button name="ddd" value="sumb">ADD</button>  
@@ -109,20 +132,21 @@ legend.scheduler-border {
   <button name="ddd" value="sumb">CLEAR</button>  
 </div>
 </div>
-  </div>
-    <div class="col-sm-4 panel panel-default" style="background-color: #f7f7f7">
+  </div> --%>
+ 
+    <div class="col-sm-6 panel panel-default" style="background-color: #f7f7f7">
    
       <div class="panel-body" style="margin-top: 5px;padding-right: 5px;">
     <div class="form-group row">     
   <label  class="col-xs-4 col-form-label">Name</label>
   <div class="col-xs-8">
-    <input class="form-control" type="text" value="Name Field" />
+    <form:input class="form-control"  path="username" placeholder="Name Field" />
   </div>  
 </div>
 <div class="form-group row">     
   <label  class="col-xs-4 col-form-label">UserName</label>
   <div class="col-xs-8">
-    <input class="form-control" type="text" value="Username Field" />
+    <input class="form-control" type="text" value="" placeholder="Username Field" />
   </div>  
 </div>
 <div class="form-group row">     
@@ -172,17 +196,32 @@ legend.scheduler-border {
 </div>
 
 </div>
+ <!-- <div class="col-sm-12 panel panel-default" style="background-color: #f7f7f7"> -->
+   <!--  <div class="panel-body" style="margin-top: 5px;"> -->
+  <div class="form-group row" align="left"> 
+     
+  <button name="ddd" value="sumb">ADD</button>    
+  <button name="ddd" value="sumb">GET</button>      
+  <button name="ddd" value="sumb">EDIT</button>       
+  <input type="submit" value="BACK" style="color:#000"/>      
+  <button name="ddd" value="sumb">CLEAR</button>
+    
+</div>
 
+
+<!-- </div> -->
+<!--   </div> -->
     </div>
+
     <div class="col-sm-5  panel panel-default" style="background-color: #f7f7f7">
     
     <div class="panel-body col-xs-12">
         <div class="table-responsive">
     
-  <table class="table table-bordered" style="margin: 0;">
+  <table  id="example" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0"  style="margin: 0;">
     
-      <tr>
-        <td>Firstname</td>
+     <%--  <tr>
+        <td><form:input path="username" placeholder="Name Field" /></td>
         <td>Lastname</td>
         <td>Email</td>
       </tr>
@@ -202,15 +241,56 @@ legend.scheduler-border {
         <td>July</td>
         <td>Dooley</td>
         <td>july@example.com</td>
-      </tr>
+      </tr> --%>
+      <thead>
+            <tr>
+                <th>User name</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Mobile</th>
+                <th>Status</th>
+            
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Tiger</td>
+                <td>Nixon</td>
+                <td>System Architect</td>
+                <td>Edinburgh</td>
+                <td>61</td>
+           
+            </tr>
+            <tr>
+                <td>Garrett</td>
+                <td>Winters</td>
+                <td>Accountant</td>
+                <td>Tokyo</td>
+                <td>63</td>
+              
+            </tr>
+            <tr>
+                <td>Ashton</td>
+                <td>Cox</td>
+                <td>Junior Technical Author</td>
+                <td>San Francisco</td>
+                <td>66</td>
+              
+            </tr>
+           
+           
+        </tbody>
    
   </table>
   </div>
 </div>
 
 </div>
+
+      </form:form> 
   </div>
 </fieldset>
+ 
 </div>
   
   

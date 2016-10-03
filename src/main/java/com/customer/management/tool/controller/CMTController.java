@@ -73,9 +73,18 @@ public class CMTController {
 	
 	
 	  @RequestMapping(value = "/adduser", method=RequestMethod.POST)
-      public String home() {
+      public String adduser(ModelMap model) {
+			model.addAttribute("command", new CMTLogin("", "", "ADMIN"));
           return "adduser";
       }
+	  
+
+	  @RequestMapping(value = "/back", method=RequestMethod.POST)
+      public String back(@ModelAttribute("command") CMTLogin cmtLogin ,Model model) {
+		  System.out.println("in back"+cmtLogin.getUsername());
+          return "adduser";
+          //return "menu";
+      } 
 	  
 	  
 	/*  @RequestMapping(value="/",method=RequestMethod.GET)

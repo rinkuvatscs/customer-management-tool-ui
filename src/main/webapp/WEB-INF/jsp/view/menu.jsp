@@ -5,10 +5,12 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Example of Bootstrap 3 Dropdowns within Navs</title>
+<title>Customer Management Tool</title>
 <style type="text/css">
 	.bs-example{
-    	margin: 20px;
+    	margin-top: 20px;    	
+    	margin-left: 20px;
+    	margin-right: 20px;
     }
     hr{
         margin: 60px 0;
@@ -25,6 +27,8 @@ legend.scheduler-border {
     border: none;
     font-size: 14px;
 } 
+
+
     
 </style>
  <link href="../../../css/menustyle.css" rel="stylesheet" type="text/css" />
@@ -90,11 +94,11 @@ legend.scheduler-border {
             </ul>
        <hr>   
       </div>
-      <div class="col-sm-12" align="left">
+      <!-- <div class="col-sm-12 block" align="left">
       <fieldset class="scheduler-border">
       <legend class="scheduler-border"><b>WELCOME ADMIN</b></legend>
      <h3 align="center"><b>Welcome Admin</b></h3> 
       </fieldset>
-      </div>
+      </div> -->
 </body>
 </html>                                		
